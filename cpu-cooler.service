@@ -1,0 +1,14 @@
+[Unit]
+Description=Atualiza display do Mystic G1
+After=default.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/jsa/Documentos/cpu-cooler-mancer-mystic-G1-main
+ExecStart=/home/jsa/Documentos/cpu-cooler-mancer-mystic-G1-main/.venv/bin/python /home/jsa/Documentos/cpu-cooler-mancer-mystic-G1-main/cpu_cooler.py
+Restart=on-failure
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=default.target
